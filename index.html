@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pomodoro Timer</h1>
+        <button id="settings-btn">⚙️</button>
+    </header>
+
+    <main>
+        <div id="timer">
+            <h2 id="task-title">Task: <span id="task-name-display"></span></h2>
+            <input type="text" id="task-name" placeholder="Enter task name" />
+            <div id="time-display">00:00:00</div>
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Settings</h2>
+                <label>Work Time (seconds to hours): <input type="number" id="work-time" min="1" max="86400" value="1500"></label>
+                <label>Rest Time (seconds to hours): <input type="number" id="rest-time" min="1" max="86400" value="300"></label>
+                <button id="save-settings">Save</button>
+            </div>
+        </div>
+
+        <div id="history">
+            <h2>Task History</h2>
+            <button id="export-btn">Export History</button>
+            <ul id="history-list"></ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
